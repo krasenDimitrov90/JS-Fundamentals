@@ -7,10 +7,8 @@ function solve(num) {
                 let thirdSymbol = String.fromCharCode(97 + k);
                 console.log(`${firstSymbol}${secondSymbol}${thirdSymbol}`);
             }
-            
         }
-        
     }
 }
-solve ('3')
-solve (2)
+solve('3')
+solve(2)
