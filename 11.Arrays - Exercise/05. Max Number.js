@@ -4,7 +4,7 @@ function solve(arr) {
   let arrayL = array.length;
   let maxNumber
 
-  for (let i = array.length - 1; i >= 0; i--) {
+  for (let i = arrayL - 1; i >= 0; i--) {
     let currentNum = Number(array[i]);
     if (i === array.length - 1) {
       newArr.push(currentNum);
