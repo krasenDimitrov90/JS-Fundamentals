@@ -1,6 +1,6 @@
-function convertObjectToJSON(firstName, lastName, hairColor) {
+function convertObjectToJSON(name, lastName, hairColor) {
     let person = {
-        firstName: firstName,
+        name: name,
         lastName: lastName,
         hairColor: hairColor
     };
