@@ -1,0 +1,24 @@
+let obj = {
+        system : {
+            system1: [1,2,3],
+            component2: [12,2,3,4],
+            component3: [5,4,7,8,7]
+        },
+        CPU : {
+            CPU1: [1,2,3],
+            component2: [12,2,3,4],
+            component3: [5,4,7]
+        },
+        RAM : {
+            RAM1: [1,2,3]
+        }
+    }
+    Object.entries(obj) - keys and values - Array
+                [system , {...}] - a[0] = system , a[1] = {...}
+                [CPU , {...}] - a[0] = CPU , a[1] = {...}
+                [RAM , {...}] - a[0] = RAM , a[1] = {...}
+
+                Object.entries(a[1]) - from system
+                        [system1, [1,2,3]]
+                        [component2, [12,2,3,4]]
+                        [component3, [5,4,7,8,7]]
