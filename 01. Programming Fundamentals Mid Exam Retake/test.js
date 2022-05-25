@@ -1,3 +1,3 @@
-let arr = [1,2,3,4,5,7,8]
-let num = 3
-console.log(arr[num]);
+let str = '1 2   , 3 4'
+let arr = str.split(/\s+\,+/g)
+console.log(arr);
