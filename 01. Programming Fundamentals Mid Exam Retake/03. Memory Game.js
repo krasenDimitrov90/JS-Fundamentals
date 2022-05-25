@@ -5,14 +5,18 @@ function memoryGames(input) {
     while (tokens !== "end") {
         let arrToPlayL = arrToPlay.length;
         let isValidNumbers = (num) => num < arrToPlayL && num >= 0
+        let indicies = tokens.split(' ')
+        let [index1, index2] = indicies
 
-        if (!tokens.split(' ').every(isValidNumbers)) {
-            let arrMidle = Math.floor(arrToPlayL / 2);
-            arrToPlay.splice(arrMidle, 0, '-2a', '-2a')
-            console.log(`Invalid input! Adding additional elements to the board`);
+        if (!indicies.every(isValidNumbers) || index1 === index2) {
             moves++;
+            let arrMidle = Math.floor(arrToPlayL / 2);
+            let parasite = '-'+ moves + 'a'
+            arrToPlay.splice(arrMidle, 0, parasite, parasite)
+            console.log(`Invalid input! Adding additional elements to the board`);
+            
         } else {
-            let [index1, index2] = tokens.split(' ')
+            
             let firstSymbol = arrToPlay[index1]
             let secondSymbol = arrToPlay[index2]
             if (firstSymbol === secondSymbol) {
@@ -36,12 +40,14 @@ function memoryGames(input) {
     console.log(arrToPlay.join(' '));
 }
 memoryGames([
-    "a 2 4 a 2 4",
-    "4 0",
-    "0 2",
-    "0 1",
-    "0 1",
+    "1 1 2 2 3 3 4 4 5 5", 
+    "1 0",
+    "-1 0",
+    "1 0", 
+    "1 0", 
+    "1 0", 
     "end"
-]
+    ]
+    
 
 )

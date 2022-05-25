@@ -6,6 +6,7 @@ let secondArr = Array.from(Array(num2), (_, index) => index + 1);
 let firsSum = firstArr.reduce((acc , el) => acc *= el )
 let secondSum = secondArr.reduce((acc , el) => acc *= el )
 
+console.log(firsSum);
 let result = firsSum / secondSum;
 console.log(result.toFixed(2));
 }
