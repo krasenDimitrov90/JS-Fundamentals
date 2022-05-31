@@ -44,9 +44,8 @@ function compositors(input) {
                 console.log(`Invalid operation! ${currentPiece} does not exist in the collection.`);
 
             } else {
-                // let filtered = compositorsList.filter((el) => el.piece !== currentPiece);
-                // compositorsList = filtered;
-                let objIndex = compositorsList.findIndex((obj => obj.piece == currentPiece));
+                
+                let objIndex = compositorsList.findIndex((obj => obj.piece === currentPiece));
                 compositorsList.splice(objIndex,1)
                 console.log(`Successfully removed ${currentPiece}!`);
                 
@@ -59,7 +58,7 @@ function compositors(input) {
                 console.log(`Invalid operation! ${currentPiece} does not exist in the collection.`);
 
             } else {
-                let objIndex = compositorsList.findIndex((obj => obj.piece == currentPiece));
+                let objIndex = compositorsList.findIndex((obj => obj.piece === currentPiece));
                 compositorsList[objIndex].key = currentKey;
                 console.log(`Changed the key of ${currentPiece} to ${currentKey}!`);
             }
